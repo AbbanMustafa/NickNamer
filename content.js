@@ -5,7 +5,7 @@ function getword(info,tab) {
   });           
 }
 chrome.contextMenus.create({
-  title: "Search: %s", 
+  title: "Give % a nickname", 
   contexts:["selection"], 
   onclick: getword,
 });
