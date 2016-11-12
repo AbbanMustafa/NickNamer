@@ -1,22 +1,12 @@
 {
-"manifest_version": 1,
-    "name": "NickNamer",
-    "description": "Make a nickname for anyone you know",
+    "name": "Nicknamer",
     "version": "1.0",
-    "browser_action": {
-      "default_title": "NickNamer",
-      "default_icon": "nickname_icon.png"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "*://*/*"
-            ],
-            "js": [
-                "content.js"
-                "background.js"
-            ],
-            "run_at": "document_end"
-        },
-    ]
+    "manifest_version": 2,
+    "description": "nickname stuff",
+    "permissions": [
+      "contextMenus"
+     ],
+    "background": { 
+      "scripts": ["content.js"]
+    }
 }
