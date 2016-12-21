@@ -6,7 +6,7 @@
     "permissions": [
       "contextMenus"
      ],
-    "background": { 
+    "background": {
       "scripts": ["content.js"]
     }
 }

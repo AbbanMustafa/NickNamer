@@ -1,3 +1,18 @@
+//document.forms[0].onsubmit = function(e) {
+//    e.preventDefault(); // Prevent submission
+//    var nickname = document.getElementById('pass').value;
+
+//    chrome.runtime.getBackgroundPage(function(bgWindow) {
+//      bgWindow.setPassword(nickname);
+//      window.close();     // Close dialog
+//  });
+//};
+
+//chrome.windows.remove(){
+
+
+//};
+
 function walk(rootNode)
 {
     // Find all the text nodes in rootNode
@@ -21,10 +36,9 @@ function handleText(textNode) {
 
 function replaceText(v)
 {
-
-
-
-    v = v.replace(/\b - ('s|s(?:')?)?\b/g, " - $1");
+    var og = localStorage.getItem("origin");
+    var OrigExp = new RegExp("\b"+og+"('s|s(?:')?)?\b","g");
+    v = v.replace(OrigExp, newtext+"$1");
 
         return v;
     }
